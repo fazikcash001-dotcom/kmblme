@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UZMOVi onlayn kinoteatri</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-base-200">
+
+  <!-- HEADER -->
+  <header class="shadow-md bg-white">
+    <div class="container max-w-7xl mx-auto px-5 py-2 flex justify-between items-center">
+      <a href="./index.html">
+        <img src="6df15d459f5346426e8b21f4cd45413aeda664ee.gif" class="h-12" alt="Logo">
+      </a>
+      <nav class="flex gap-4">
+        <a href="#" class="btn btn-sm">Bosh sahifa</a>
+
+        <!-- Kinolar -->
+        <details class="dropdown">
+          <summary class="btn btn-sm">Kinolar</summary>
+          <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+            <li><a href="#" onclick="filterMovies('janr','Tarjima')">Tarjima</a></li>
+            <li><a href="#" onclick="filterMovies('janr','Premyera')">Premyeralar</a></li>
+            <li><a href="#" onclick="filterMovies('janr','Hind')">Hind kinolari</a></li>
+            <li><a href="#" onclick="filterMovies('janr','Multfilm')">Multfilmlar</a></li>
+          </ul>
+        </details>
+
+        <!-- Janr -->
+        <details class="dropdown">
+          <summary class="btn btn-sm">Janrlar</summary>
+          <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+            <li><a href="#" onclick="filterMovies('janr','Jangari')">Jangari</a></li>
+            <li><a href="#" onclick="filterMovies('janr','Drama')">Drama</a></li>
+            <li><a href="#" onclick="filterMovies('janr','Komediya')">Komediya</a></li>
+            <li><a href="#" onclick="filterMovies('janr','Fantastika')">Fantastika</a></li>
+          </ul>
+        </details>
+
+        <!-- Yil -->
+        <details class="dropdown">
+          <summary class="btn btn-sm">Yil</summary>
+          <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+            <li><a href="#" onclick="filterMovies('yil','2023')">2023</a></li>
+            <li><a href="#" onclick="filterMovies('yil','2024')">2024</a></li>
+            <li><a href="#" onclick="filterMovies('yil','2025')">2025</a></li>
+          </ul>
+        </details>
+
+        <!-- Mamlakat -->
+        <details class="dropdown">
+          <summary class="btn btn-sm">Mamlakat</summary>
+          <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+            <li><a href="#" onclick="filterMovies('mamlakat','AQSH')">AQSH</a></li>
+            <li><a href="#" onclick="filterMovies('mamlakat','Koreya')">Koreya</a></li>
+            <li><a href="#" onclick="filterMovies('mamlakat','Hindiston')">Hindiston</a></li>
+            <li><a href="#" onclick="filterMovies('mamlakat','O‘zbekiston')">O‘zbekiston</a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FILM LIST -->
+  <main class="container max-w-7xl mx-auto px-5 py-6">
+    <h2 class="text-2xl font-bold mb-4">Kinolar</h2>
+    <div id="movies" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"></div>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>
